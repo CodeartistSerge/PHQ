@@ -1,0 +1,5 @@
+indexes:
+- kind: GhostNames
+  properties:
+  - name: email
+  - name: reserved_at

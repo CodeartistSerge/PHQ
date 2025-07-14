@@ -11,8 +11,6 @@
 					<li class="ca_card">
 						<h3>{{ ghostname.ghost_name }}</h3>
 						<p>{{ ghostname.ghost_description }}</p>
-						<p>{{ ghostname.created_at }}</p>
-						<p>{{ ghostname.updated_at }}</p>
 						<form method="post">
 							<input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
 							<input type="hidden" name="ghost_unique_hash" value="{{ ghostname.ghost_unique_hash }}">
