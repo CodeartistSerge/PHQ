@@ -1,6 +1,6 @@
 # Overview
 ## App URL preview
-https://elevated-cat-465604-h1.ts.r.appspot.com/ \
+https://elevated-cat-465604-h1.ts.r.appspot.com/
 > [!NOTE]
 > I might have to add people to the whitelist as I am not part of any organisation and can only run it in the Test mode (up to 100 testers)
 ## Stack
