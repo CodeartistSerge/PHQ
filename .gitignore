@@ -1,0 +1,49 @@
+# TODO: Clean up and make more specific
+*.pyc
+.idea
+.pytest_cache
+env/
+.coverage
+htmlcov
+__pycache__/
+*.egg-info/
+.nox/
+.mypy_cache/
+.venv/
+/build/
+
+# compiled
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+#virtual envs
+.env/
+venv/
+env/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# IDE
+.idea/
+.vscode/
+.project
+prepros.config
+
+*.log
+*.tmp
+.env
+credentials.json
+
+# tests
+htmlcov/
+.coverage
+.pytest_cache/
+
+# Operating system files
+.DS_Store
+Thumbs.db

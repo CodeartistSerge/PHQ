@@ -1,0 +1,34 @@
+{% extends "_base.html" %}
+
+{% block body %}
+
+	<section class="ca_container">
+		<div class="ca_card ca_u_centered ca_u_fullwidth ca_u_flex_column">
+			{% if user.ghost_name %}
+				<h4>Your Ghost Name Is</h4>
+				<h2>{{ user.first_name }} “{{ user.ghost_name }}” {{ user.last_name }}</h2>
+			{% endif %}
+			<div class="ca_u_flex_row">
+				{% if user.ghost_name %}
+					<a href="{{ url_for('account') }}" class="ca_button">Change your current Phantom name</a>
+				{% else %}
+					<a href="{{ url_for('account') }}" class="ca_button">Get a Phantom name</a>
+				{% endif %}
+			</div>
+		</div>
+	</section>
+	<section class="ca_container">
+		<div class="ca_card ca_u_centered ca_u_fullwidth ca_u_flex_column">
+			<h2>Ghost Names:</h2>
+			<ul class="ca_u_grid_4">
+				{% for ghostname in ghostnames %}
+					<li class="ca_card">
+						<h3>{{ ghostname.ghost_name }}</h3>
+						<p>{{ ghostname.first_name }} {{ ghostname.last_name }} ({{ ghostname.email }})</p>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</section>
+
+{% endblock body %}

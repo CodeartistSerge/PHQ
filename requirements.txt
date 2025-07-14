@@ -1,0 +1,8 @@
+Flask==2.3.2
+#secure scaffold 1.1.0
+https://github.com/google/gae-secure-scaffold-python3/archive/1.1.0.zip
+google-cloud-ndb
+authlib
+dotenv
+datetime
+uuid

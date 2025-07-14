@@ -1,0 +1,28 @@
+{% extends "_base.html" %}
+
+{% block body %}
+
+	<section class="ca_container">
+		<div class="ca_card ca_u_centered ca_u_fullwidth ca_u_flex_column">
+			<h2>Select Your New Ghost Name:</h2>
+			<p>{{ free_ghost_names | length }} ghost names available.</p>
+			<ul class="ca_u_grid_3 ca_ghostname_selection">
+				{% for ghostname in free_ghost_names %}
+					<li class="ca_card">
+						<h3>{{ ghostname.ghost_name }}</h3>
+						<p>{{ ghostname.ghost_description }}</p>
+						<p>{{ ghostname.created_at }}</p>
+						<p>{{ ghostname.updated_at }}</p>
+						<form method="post">
+							<input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+							<input type="hidden" name="ghost_unique_hash" value="{{ ghostname.ghost_unique_hash }}">
+							<input type="hidden" name="reserved_at" value="{{ ghostname.reserved_at }}">
+							<button type="submit" class="ca_button">Select</button>
+						</form>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</section>
+
+{% endblock body %}

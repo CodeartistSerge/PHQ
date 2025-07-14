@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+	<head>
+		<title>{{ page_title }}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="/static/main.css" nonce="{{ csp_nonce() }}">
+		{% block extrahead %}{% endblock %}
+	</head>
+	<body>
+		<header class="ca_wrapper">
+			<section class="ca_container">
+				<div class="ca_card ca_u_centered ca_u_fullwidth">
+					<h1>PHQ Ghost Names</h1>
+				</div>
+			</section>
+		</header>
+		<main class="ca_wrapper">
+			{% block body %}{% endblock %}
+		</main>
+		<footer class="ca_wrapper">
+
+		</footer>
+	</body>
+</html>

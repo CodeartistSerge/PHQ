@@ -1,0 +1,40 @@
+{% extends "_base.html" %}
+
+{% block body %}
+
+<section class="ca_container">
+	<div class="ca_card ca_u_fullwidth ca_u_flex_column ca_u_centered">
+		<h1 class="ca_u_no_margin ca_u_text_center">Account of {{ email }}</h1>
+		<p>Not your account? <a href="{{ url_for('logout') }}">Logout!</a></p>
+	</div>
+</section>
+<section class="ca_container">
+	<div class="ca_card ca_u_fullwidth ca_u_flex_column ca_u_centered">
+		<h2 class="ca_u_no_margin">Your Full Name:</h2>
+		<form method="post" class="ca_form">
+			<input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+
+			{% if error_message %}
+				<div class="ca_field">
+					<p class="ca_m_error">{{ error_message }}</p>
+				</div>
+			{% endif %}
+			<div class="ca_field">
+				<label for="first_name">First name</label>
+				<input type="text" name="first_name" value="{{ first_name or '' }}" id="first_name" placeholder="First name">
+			</div>
+
+			<div class="ca_field">
+				<label for="last_name">Last name</label>
+				<input type="text" name="last_name" value="{{ last_name or '' }}" id="last_name" placeholder="Last name">
+			</div>
+
+			<div class="ca_field">
+				<button type="submit" class="ca_button">Next</button>
+			</div>
+
+		</form>
+	</div>
+</section>
+
+{% endblock body %}
