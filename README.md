@@ -9,7 +9,7 @@ A simple front, as minimalistic as possible. Jinja templates come with Flask, so
 - **Flask**\
 Lightweight Python framework. Easy routing, no fluff, pretty much everything could be custom. Love it ❤️
 - **Google Python3 Secure Scaffold**\
-Used it as it was recommended in the brief. A solid kickstart boilerplate.
+Used it as it was recommended in the brief. A solid kickstart boilerplate. Automatic CSRF is a bliss ✨
 - **Google Firebase Datastore**\
 NoSQL implementation from Google
 - **Google Cloud NDB**
