@@ -12,12 +12,14 @@ Lightweight Python framework. Easy routing, no fluff, pretty much everything cou
 Used it as it was recommended in the brief. A solid kickstart boilerplate. Automatic CSRF is a bliss ✨
 - **Google Firebase Datastore**\
 NoSQL implementation from Google
-- **Google Cloud NDB**
+- **Google Cloud NDB**\
 Python lib. A wrapper for the Firebase Datastore.
-- **Google Authentication**
+- **Google Authentication**\
 An easy way to authenticate users
-- **Google App Engine**
+- **Google App Engine**\
 A serverless platform for deployment
+- **pyLinter**\
+With configs recommended by Google's Python style guides. The only sin on my part is doubling the default line width limit in chars as it quickly got too annoying...
 ## Dataflow chart
 ```mermaid
 flowchart TD
